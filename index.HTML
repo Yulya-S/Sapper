@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css.css">
+  </head>
+  <body style="margin-left: 420px;">
+    <button onclick="rollUp()" style="background-image: url('./images/open.png')"></button>
+
+    <div style="transform: scaleX(1)">
+      <button onclick="createField()">Новая игра</button>
+      <button onclick="regimeСhange()">Отмечать бомбы</button>
+      <a></a>
+      <a></a>
+      <div class="setting">
+        <label>Выберите настройки:
+          <select id="difficultyLevel" onchange='changedPlayer()'>
+            <option value="IAMLUCKY">Всегда везёт</option>
+            <option value="EASY">Легкий</option>
+            <option value="AVERAGE">Средний</option>
+            <option value="HARD">Сложный</option>
+            <option value="VARYHARD">Супер сложный</option>
+            <option value="PERSONALITY">Пользовательский</option>
+          </select>
+        </label>
+        <label style="display: none">Кол-во ячеек по X: <input type="number" name="x" onchange='aNaming()' value="12"></label>
+        <label style="display: none">Кол-во ячеек по Y: <input type="number" name="y" onchange='aNaming()' value="12"></label>
+        <a style="display: none"></a>
+        <label style="display: none">Кол-во бомб: <input type="number" name="bombs" onchange='aNaming()' value="20"></label>
+        <a style="display: none"></a>
+        <button onclick="settings()">Применить настройки</button>
+      </div>
+    </div>
+
+    <div></div>
+
+    <p id='text'></p>
+    <div class="grid"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
